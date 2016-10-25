@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Projet_Android_644</string>
-    <string name="test">Test Sam</string>
+    <string-array name="companies">
+        <item>Clip Industrie</item>
+        <item>HES-SO Valais</item>
+    </string-array>
+    <string-array name="workers">
+        <item>Samuel</item>
+        <item>Jacques</item>
+    </string-array>
+    <string-array name="activities">
+        <item>Projet 1</item>
+        <item>Projet 2</item>
+    </string-array>
+    <string name="tv_worker">Worker :</string>
+    <string name="tv_company">Company :</string>
+    <string name="tv_activity">Activity :</string>
 </resources>
