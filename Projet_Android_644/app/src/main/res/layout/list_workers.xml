@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_edit_Worker_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/js_vertical_margin"
+    android:paddingLeft="@dimen/js_horizontal_margin"
+    android:paddingRight="@dimen/js_horizontal_margin"
+    android:paddingTop="@dimen/js_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.samuel.projet_android_644.ListWorkers">
+    <!--Changer padding dans dimens.xml->dimens.xml-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+        <ListView
+            android:id="@+id/lv_workers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin" />
+    </LinearLayout>
+</LinearLayout>

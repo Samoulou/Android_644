@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Layout_edit_Company_main"
+    android:id="@+id/Layout_edit_Activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/js_vertical_margin"
@@ -19,7 +19,7 @@
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
         <EditText
-            android:id="@+id/et_companyName"
+            android:id="@+id/et_activityName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -27,7 +27,7 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:hint="@string/company" />
+            android:hint="@string/activity" />
     </LinearLayout>
 
     <LinearLayout
@@ -37,7 +37,7 @@
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
        <TextView
-            android:id="@+id/tv_companyActivated"
+            android:id="@+id/tv_activityActivated"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -45,10 +45,10 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/company_activated">
+            android:text="@string/activity_activated">
         </TextView>
         <Switch
-            android:id="@+id/tb_company_activated"
+            android:id="@+id/tb_activity_activated"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -64,7 +64,7 @@
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
         <TextView
-            android:id="@+id/company_activated_hint"
+            android:id="@+id/activity_activated_hint"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -72,8 +72,27 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/company_activated_hint">
+            android:text="@string/activity_activated_hint">
         </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+        <ListView
+            android:listSelector="@color/colorPrimary"
+            android:id="@+id/adding_worker"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin"
+            android:text="@string/activity_activated_hint">
+        </>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

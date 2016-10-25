@@ -12,6 +12,8 @@
         <item>Projet 1</item>
         <item>Projet 2</item>
     </string-array>
+
+    <string name="list_workers">Workers</string>
     <string name="tv_worker">Worker :</string>
     <string name="tv_company">Company :</string>
     <string name="firstname">Firstname</string>
@@ -20,9 +22,15 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
 
+    <string name="list_companies">Companies</string>
     <string name="company">Company name</string>
     <string name="company_activated">Company activated</string>
     <string name="company_activated_hint">Activated this company, to make it available on the home page.</string>
+
+    <string name="list_activities">Activities</string>
+    <string name="activity">Activity name</string>
+    <string name="activity_activated">Activity activated</string>
+    <string name="activity_activated_hint">Activated this activity, to make it available on the home page.</string>
 
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
