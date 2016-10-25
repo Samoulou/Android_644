@@ -19,6 +19,11 @@
     <string name="birthdate">Birthdate</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+
+    <string name="company">Company name</string>
+    <string name="company_activated">Company activated</string>
+    <string name="company_activated_hint">Activated this company, to make it available on the home page.</string>
+
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
