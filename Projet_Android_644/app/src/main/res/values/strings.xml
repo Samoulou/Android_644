@@ -14,5 +14,13 @@
     </string-array>
     <string name="tv_worker">Worker :</string>
     <string name="tv_company">Company :</string>
-    <string name="tv_activity">Activity :</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
 </resources>
