@@ -16,6 +16,7 @@
     <string name="list_workers">Workers</string>
     <string name="tv_worker">Worker :</string>
     <string name="tv_company">Company :</string>
+    <string name="tv_activity">Activity :</string>
     <string name="firstname">Firstname</string>
     <string name="lastname">Lastname</string>
     <string name="birthdate">Birthdate</string>
