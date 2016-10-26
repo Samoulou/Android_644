@@ -3,7 +3,6 @@ package com.example.samuel.projet_android_644;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
-
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;

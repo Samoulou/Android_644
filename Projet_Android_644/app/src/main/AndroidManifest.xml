@@ -9,33 +9,44 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EditCompany" />
-        <activity android:name=".EditActivity"
+        <activity
+            android:name=".EditActivity"
             android:label="Edit activity">
-            <!-- <intent-filter>
+
+            <!--
+                 <intent-filter>
                             <action android:name="android.intent.action.MAIN" />
                             <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>-->
+                        </intent-filter>
+            -->
         </activity>
-
         <activity android:name=".EditWorker" />
         <activity android:name=".ListCompanies" />
         <activity android:name=".ListActivities" />
-
-        <activity android:name=".ListWorkers"
+        <activity
+            android:name=".ListWorkers"
             android:label="Workers list">
-           <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-    </activity>
-        <activity android:name=".MainActivity"
+        </activity>
+        <activity
+            android:name=".MainActivity"
             android:label="WorkTime">
-        <!--<intent-filter>
+
+            <!--
+        <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>-->
+        </intent-filter>
+            -->
         </activity>
         <activity android:name=".StartingInfos" />
+        <activity android:name=".ViewWorker" />
+        <activity android:name=".ViewActivity" />
+        <activity android:name=".ViewCompany"></activity>
     </application>
 
 </manifest>
