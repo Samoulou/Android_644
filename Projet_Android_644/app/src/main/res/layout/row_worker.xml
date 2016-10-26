@@ -38,7 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/name"
             android:layout_below="@+id/name"
-            android:textColor="@android:color/black"
             tools:text="Birthdate : " />
 
         <TextView

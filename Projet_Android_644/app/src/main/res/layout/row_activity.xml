@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_Row_Activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/js_vertical_margin"
+    android:paddingTop="@dimen/js_vertical_margin">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Activity name" />
+        <TextView
+            android:id="@+id/nbWorkers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            tools:text="number of workers : " />
+        <TextView
+            android:id="@+id/nbWorkers_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nbWorkers"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/name"
+            tools:text="0" />
+        <TextView
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nbWorkers"
+            android:textColor="@android:color/black"
+            tools:text="null" />
+    </RelativeLayout>
 </LinearLayout>
