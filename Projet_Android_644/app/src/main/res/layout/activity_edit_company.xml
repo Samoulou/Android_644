@@ -26,6 +26,7 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
+            android:inputType="textAutoComplete"
             android:hint="@string/company" />
     </LinearLayout>
 
@@ -100,7 +101,7 @@
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin"
         android:paddingBottom="@dimen/js_horizontal_margin"
-        android:paddingTop="@dimen/js_horizontal_margin">
+        android:paddingTop="64dp">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListWorkers extends AppCompatActivity {
-    ListView _listView;
+    private ListView _listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class ListWorkers extends AppCompatActivity {
 
         _listView = (ListView) findViewById(R.id.lv_workers);
 
-        List<Worker> workers = genererWorkers();
+        List<Worker> workers = get_AllWorkers();
 
         WorkerAdapter adapter = new WorkerAdapter(ListWorkers.this, workers);
         _listView.setAdapter(adapter);
@@ -26,12 +26,14 @@ public class ListWorkers extends AppCompatActivity {
 
 
 
-    private List<Worker> genererWorkers(){
+    private List<Worker> get_AllWorkers(){
         List<Worker> workers = new ArrayList<Worker>();
-        workers.add(new Worker("Duchmol","Florent", Date.valueOf("1980-07-07"),'m'));
-        workers.add(new Worker("Schaler","Noémie", Date.valueOf("1991-12-12"),'f'));
-        workers.add(new Worker("Dupont","Thierry", Date.valueOf("1971-10-09"),'m'));
-        workers.add(new Worker("Fournier","Clémantine", Date.valueOf("1996-01-08"),'f'));
+
+        workers.add(new Worker("Duchmol","Florent", Date.valueOf("1980-07-07"),'m',true));
+        workers.add(new Worker("Schaler","Noémie", Date.valueOf("1991-12-12"),'f',true));
+        workers.add(new Worker("Dupont","Thierry", Date.valueOf("1971-10-09"),'m',false));
+        workers.add(new Worker("Fournier","Clémantine", Date.valueOf("1996-01-08"),'f',true));
+
         return workers;
     }
 }

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    android:scrollbars = "vertical"
+    android:scrollbarStyle="insideInset">
+<LinearLayout
     android:id="@+id/activity_edit_worker"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,6 +33,7 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
+            android:inputType="textAutoComplete"
             android:hint="@string/firstname" />
     </LinearLayout>
 
@@ -109,6 +117,52 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+        <TextView
+            android:id="@+id/tv_workerActivated"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin"
+            android:text="@string/worker_activated">
+        </TextView>
+        <Switch
+            android:id="@+id/sw_worker_activated"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+        <TextView
+            android:id="@+id/worker_activated_hint"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin"
+            android:text="@string/worker_activated_hint">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin"
         android:paddingBottom="@dimen/js_horizontal_margin"
         android:paddingTop="@dimen/js_horizontal_margin">
@@ -141,3 +195,4 @@
     </LinearLayout>
     
 </LinearLayout>
+</ScrollView>

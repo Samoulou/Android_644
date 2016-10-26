@@ -1,6 +1,7 @@
 package com.example.samuel.projet_android_644;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ public class WorkerAdapter extends ArrayAdapter<Worker> {
             viewHolder.name = (TextView) convertView.findViewById(R.id.name);
             viewHolder.birthdate = (TextView) convertView.findViewById(R.id.birthdate);
             viewHolder.sex = (ImageView) convertView.findViewById(R.id.sex);
+            viewHolder.active = (TextView) convertView.findViewById(R.id.active);
             //viewHolder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
             convertView.setTag(viewHolder);
         }
@@ -43,7 +45,15 @@ public class WorkerAdapter extends ArrayAdapter<Worker> {
         //il ne reste plus qu'à remplir notre vue
         viewHolder.name.setText(worker.get_lastname() + " " + worker.get_firstname());
         viewHolder.birthdate.setText(worker.get_birthdate().toString());
-        //viewHolder.avatar.setImageDrawable(new ColorDrawable(worker.getColor()));
+        if(worker.get_sex()=='m')
+            viewHolder.sex.setImageDrawable(new ColorDrawable(Color.CYAN));
+        else
+            viewHolder.sex.setImageDrawable(new ColorDrawable(Color.MAGENTA));
+
+        if(worker.get_active()==true)
+            viewHolder.active.setText("Available");
+        else
+            viewHolder.active.setText("Unavailable");
 
         return convertView;
     }
@@ -52,5 +62,6 @@ public class WorkerAdapter extends ArrayAdapter<Worker> {
         private  TextView name;
         private TextView birthdate;
         private ImageView sex;
+        private TextView active;
     }
 }

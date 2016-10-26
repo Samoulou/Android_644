@@ -4,54 +4,60 @@
     android:id="@+id/Layout_Row_Worker_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/js_vertical_margin"
-    android:paddingLeft="@dimen/js_horizontal_margin"
-    android:paddingRight="@dimen/js_horizontal_margin"
-    android:paddingTop="@dimen/js_vertical_margin"
-    android:orientation="vertical">
+    android:paddingTop="@dimen/js_vertical_margin">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
-    <ImageView
-        android:id="@+id/sex"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:background="#AAA"
 
-        />
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:background="#AAA" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_marginLeft="@dimen/js_horizontal_margin"
-        android:layout_toRightOf="@+id/sex"
-        android:layout_alignTop="@+id/sex"
-        android:textStyle="bold"
-        tools:text="Firstname Lastname"
-        />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sex"
+            android:layout_marginLeft="@dimen/js_horizontal_margin"
+            android:layout_toRightOf="@+id/sex"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Firstname Lastname" />
+
         <TextView
             android:id="@+id/birthdate_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-
             android:layout_alignLeft="@+id/name"
             android:layout_below="@+id/name"
-            tools:text="Birthdate : "
-            />
-    <TextView
-        android:id="@+id/birthdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/birthdate_name"
-        android:layout_below="@+id/name"
-        tools:text="17.07.1981"
-        />
-</RelativeLayout>
+            android:textColor="@android:color/black"
+            tools:text="Birthdate : " />
+
+        <TextView
+            android:id="@+id/birthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/birthdate_name"
+            android:textColor="@android:color/black"
+            tools:text="17.07.1981" />
+
+        <TextView
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/js_horizontal_margin"
+            android:layout_toRightOf="@+id/sex"
+            android:layout_below="@+id/birthdate"
+            android:textColor="@android:color/black"
+            tools:text="null" />
+    </RelativeLayout>
 </LinearLayout>
