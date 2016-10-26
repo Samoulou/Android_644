@@ -84,6 +84,7 @@
         android:paddingBottom="@dimen/js_horizontal_margin"
         android:paddingTop="@dimen/js_horizontal_margin">
         <Button
+            android:id="@+id/b_save_edit_company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

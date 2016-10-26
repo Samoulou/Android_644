@@ -22,6 +22,8 @@
     <string name="birthdate">Birthdate</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="tv_startat">Start at :</string>
+    <string name="tv_duration">Duration :</string>
 
     <string name="list_companies">Companies</string>
     <string name="company">Company name</string>
