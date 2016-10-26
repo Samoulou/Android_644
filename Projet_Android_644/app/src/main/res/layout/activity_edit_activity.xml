@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Layout_edit_Worker_main"
+    android:id="@+id/activity_edit_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/js_vertical_margin"
-    android:paddingLeft="@dimen/js_horizontal_margin"
-    android:paddingRight="@dimen/js_horizontal_margin"
-    android:paddingTop="@dimen/js_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.samuel.projet_android_644.MainActivity">
-    <!--Changer padding dans dimens.xml->dimens.xml-->
+    tools:context="com.example.samuel.projet_android_644.EditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,19 +17,8 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
-        <!--<TextView
-            android:id="@+id/tv_firstname"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin"
-            android:paddingBottom="@dimen/js_horizontal_margin"
-            android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/tv_firstname">
-        </TextView>-->
         <EditText
-            android:id="@+id/et_firstname"
+            android:id="@+id/et_activityName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -38,35 +26,35 @@
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:hint="@string/firstname" />
+            android:hint="@string/activity" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
-       <!-- <TextView
-            android:id="@+id/tv_lastname"
+        <TextView
+            android:id="@+id/tv_activityActivated"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin"
-            android:paddingBottom="@dimen/js_horizontal_margin"
-            android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/tv_lastname">
-        </TextView>-->
-        <EditText
-            android:id="@+id/et_lastname"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:layout_weight="4"
             android:paddingLeft="@dimen/js_horizontal_margin"
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:hint="@string/lastname"/>
+            android:text="@string/activity_activated">
+        </TextView>
+        <Switch
+            android:id="@+id/tb_activity_activated"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/js_horizontal_margin"
+            android:paddingRight="@dimen/js_horizontal_margin"
+            android:paddingBottom="@dimen/js_horizontal_margin"
+            android:paddingTop="@dimen/js_horizontal_margin" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,30 +62,17 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
-
-        <!--<TextView
-            android:id="@+id/tv_birthdate"
+        <TextView
+            android:id="@+id/activity_activated_hint"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin"
-            android:paddingBottom="@dimen/js_horizontal_margin"
-            android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/tv_birthdate">
-        </TextView>-->
-
-        <EditText
-            android:id="@+id/et_Birthdate"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:layout_weight="4"
             android:paddingLeft="@dimen/js_horizontal_margin"
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:inputType="date"
-            android:hint="@string/birthdate"/>
+            android:text="@string/activity_activated_hint">
+        </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,49 +80,18 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
-
-        <!--<TextView
-            android:id="@+id/tv_birthdate"
+        <ListView
+            android:listSelector="@color/colorPrimary"
+            android:id="@+id/adding_worker"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin"
-            android:paddingBottom="@dimen/js_horizontal_margin"
-            android:paddingTop="@dimen/js_horizontal_margin"
-            android:text="@string/tv_birthdate">
-        </TextView>-->
-
-        <RadioButton
-            android:id="@+id/rb_male"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:layout_weight="4"
             android:paddingLeft="@dimen/js_horizontal_margin"
             android:paddingRight="@dimen/js_horizontal_margin"
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
-            android:inputType="date"
-            android:hint="@string/male"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/js_horizontal_margin"
-        android:paddingRight="@dimen/js_horizontal_margin">
-
-        <RadioButton
-            android:id="@+id/rb_female"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin"
-            android:paddingBottom="@dimen/js_horizontal_margin"
-            android:paddingTop="@dimen/js_horizontal_margin"
-            android:inputType="date"
-            android:hint="@string/female"/>
+            android:text="@string/activity_activated_hint">
+        </ListView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

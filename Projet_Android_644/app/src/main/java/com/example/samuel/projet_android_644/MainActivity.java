@@ -10,12 +10,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Home);
+        setContentView(R.layout.activity_main);
 
-        spinner_filler(R.id.worker_spinner, R.array.workers);
-        spinner_filler(R.id.company_spinner, R.array.companies);
-        spinner_filler(R.id.activitiy_spinner, R.array.activities);
-    }
+    spinner_filler(R.id.worker_spinner, R.array.workers);
+    spinner_filler(R.id.company_spinner, R.array.companies);
+    spinner_filler(R.id.activitiy_spinner, R.array.activities);
+}
 
     public void spinner_filler(int spinner_name, int array_name)
     {
