@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/js_horizontal_margin"
     android:paddingTop="@dimen/js_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.samuel.projet_android_644.MainActivity_old">
+    tools:context="com.example.samuel.projet_android_644.recap_hour">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -166,6 +166,7 @@
         android:paddingTop="@dimen/js_vertical_margin"
         android:paddingBottom="@dimen/js_horizontal_margin">
         <Button
+            android:id="@+id/btn_startChrono"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

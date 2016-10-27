@@ -48,7 +48,8 @@
         <activity android:name=".ViewActivity" />
         <activity android:name=".ViewCompany" />
         <activity android:name=".ReportingSelection" />
-        <activity android:name=".ReportingView"></activity>
+        <activity android:name=".ReportingView" />
+        <activity android:name=".recap_hour"></activity>
     </application>
 
 </manifest>
