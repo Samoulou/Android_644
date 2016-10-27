@@ -46,7 +46,9 @@
         <activity android:name=".StartingInfos" />
         <activity android:name=".ViewWorker" />
         <activity android:name=".ViewActivity" />
-        <activity android:name=".ViewCompany"></activity>
+        <activity android:name=".ViewCompany" />
+        <activity android:name=".ReportingSelection" />
+        <activity android:name=".ReportingView"></activity>
     </application>
 
 </manifest>

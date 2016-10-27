@@ -50,7 +50,7 @@ public class WorkerAdapter extends ArrayAdapter<Worker> {
         else
             viewHolder.sex.setImageDrawable(new ColorDrawable(Color.MAGENTA));
 
-        if(worker.get_active()==true)
+        if(worker.is_active()==true)
             viewHolder.active.setText("Available");
         else
             viewHolder.active.setText("Unavailable");

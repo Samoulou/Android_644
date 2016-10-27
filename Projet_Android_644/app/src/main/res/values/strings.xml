@@ -20,6 +20,7 @@
     <string name="firstname">Firstname</string>
     <string name="lastname">Lastname</string>
     <string name="birthdate">Birthdate</string>
+    <string name="sex">Sex</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="addWorker">Add worker...</string>
@@ -33,11 +34,13 @@
 
     <string name="list_activities">Activities</string>
     <string name="activity">Activity name</string>
+    <string name="linkedWorker">Linked workers</string>
     <string name="activity_activated">Activity available</string>
     <string name="activity_activated_hint">Activate this activity to make it available.</string>
 
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
+    <string name="modify">Modify</string>
 
 </resources>

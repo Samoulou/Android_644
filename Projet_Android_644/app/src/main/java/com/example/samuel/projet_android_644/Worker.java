@@ -39,8 +39,5 @@ public class Worker {
         return _sex;
     }
 
-    public boolean get_active() {
-        return _active;
-    }
-
+    public boolean is_active() { return _active;  }
 }
