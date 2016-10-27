@@ -4,27 +4,29 @@
     android:id="@+id/activity_reporting_selection"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/js_vertical_margin"
     android:paddingLeft="@dimen/js_horizontal_margin"
     android:paddingRight="@dimen/js_horizontal_margin"
     android:paddingTop="@dimen/js_vertical_margin"
-    tools:context="com.example.samuel.projet_android_644.ReportingSelection"
-    android:orientation="vertical">
+    tools:context="com.example.samuel.projet_android_644.ReportingSelection">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="From date"/>
+            android:text="From date" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="to date"/>
+            android:text="to date" />
     </LinearLayout>
 
 
@@ -32,16 +34,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="From date"/>
+            android:text="From date" />
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="to date"/>
+            android:text="to date" />
     </LinearLayout>
 
 
@@ -50,17 +54,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/js_horizontal_margin">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose worker (optional)"/>
+            android:text="Choose worker (optional)" />
+
         <Spinner
             android:id="@+id/worker_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin">
-        </Spinner>
+            android:paddingRight="@dimen/js_horizontal_margin"></Spinner>
     </LinearLayout>
 
     <LinearLayout
@@ -68,17 +73,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/js_horizontal_margin">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose company (optional)"/>
+            android:text="Choose company (optional)" />
+
         <Spinner
             android:id="@+id/company_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin">
-        </Spinner>
+            android:paddingRight="@dimen/js_horizontal_margin"></Spinner>
     </LinearLayout>
 
     <LinearLayout
@@ -86,20 +92,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/js_horizontal_margin">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose activity (optional)"/>
+            android:text="Choose activity (optional)" />
+
         <Spinner
             android:id="@+id/activitiy_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/js_horizontal_margin"
-            android:paddingRight="@dimen/js_horizontal_margin">
-        </Spinner>
+            android:paddingRight="@dimen/js_horizontal_margin"></Spinner>
     </LinearLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get the report"/>
+        android:layout_weight="1"
+        android:text="Get the report" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Get the report by company" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Get the report by activity" />
+
 </LinearLayout>
