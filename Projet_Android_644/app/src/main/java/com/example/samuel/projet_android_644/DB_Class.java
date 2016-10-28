@@ -1,5 +1,6 @@
 package com.example.samuel.projet_android_644;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -31,6 +32,15 @@ public class DB_Class extends SQLiteOpenHelper {
         db.execSQL((SQL_CREATES_ENTRIES));
         Log.e("DATABASE OPERATIONS", "Table created");
 
+    }
+
+    public void addInfo(String firstname, String lastname, String sexe, SQLiteDatabase db)
+    {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DB_Contract.workers.COLUMN_NAME_FIRSTNAME, firstname);
+        contentValues.put(DB_Contract.workers.COLUMN_NAME_NAME, lastname);
+        contentValues.put(DB_Contract.workers.COLUMN_NAME_SEXE, firstname);
+        db.insert(DB_Contract.workers.TABLE_NAMES,null,contentValues);
     }
 
     @Override

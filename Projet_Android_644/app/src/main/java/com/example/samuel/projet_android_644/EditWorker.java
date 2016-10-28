@@ -1,6 +1,8 @@
 package com.example.samuel.projet_android_644;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +26,8 @@ public class EditWorker extends AppCompatActivity {
     private RadioButton _rbSexM;
     private Switch _swActive;
     private EditText _etBirthdate;
+    Context context = this;
+    SQLiteDatabase sqLiteDatabase;
 
     private Worker _worker;
 
@@ -31,9 +35,8 @@ public class EditWorker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_worker);
-<<<<<<< HEAD
         String className = getIntent().getStringExtra("Class");
-=======
+
 
 
 
@@ -41,7 +44,7 @@ public class EditWorker extends AppCompatActivity {
 
         _worker = intent.getParcelableExtra(ViewWorker.WORKER_VIEW);
 
->>>>>>> origin/newStructure
+
         _etFirstname = (EditText) findViewById(R.id.et_firstname);
         _etLastname = (EditText) findViewById(R.id.et_lastname);
         _etBirthdate = (EditText) findViewById(R.id.et_Birthdate);
@@ -87,7 +90,6 @@ public class EditWorker extends AppCompatActivity {
 
     public void saveWorker(View view)
     {
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         String Firstname = _etFirstname.getText().toString();
         String Lastname = _etLastname.getText().toString();
         String Sexe;
@@ -108,6 +110,10 @@ public class EditWorker extends AppCompatActivity {
         {
             isActive = false;
         }
+
+        DB_Class dbclass = new DB_Class(context);
+        sqLiteDatabase = dbclass.getWritableDatabase();
+        dbclass.addInfo(Firstname, Lastname, Sexe, sqLiteDatabase);
     }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?

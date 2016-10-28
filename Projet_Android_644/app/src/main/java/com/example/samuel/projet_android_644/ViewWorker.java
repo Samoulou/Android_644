@@ -38,22 +38,21 @@ public class ViewWorker extends AppCompatActivity {
 
 
 
-        _tvLastname.setText(_worker.get_lastname());
-        _tvFirstname.setText(_worker.get_firstname());
-        _tvBirthdate.setText(_worker.get_birthdate().toString());
-        _tvSex.setText(String.valueOf(_worker.get_sex()));
-        _tvActive.setText(String.valueOf(_worker.is_active()));  //.setText(c.getCP());
+//        _tvLastname.setText(_worker.get_lastname());
+  //      _tvFirstname.setText(_worker.get_firstname());
+    //    _tvBirthdate.setText(_worker.get_birthdate().toString());
+      //  _tvSex.setText(String.valueOf(_worker.get_sex()));
+        //_tvActive.setText(String.valueOf(_worker.is_active()));  //.setText(c.getCP());
 
         _btnModify = (Button) findViewById(R.id.btn_Modify);
-        _btnModify.setOnClickListener(new View.OnClickListener() {
+        //_btnModify.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
+
+            /*public void onClick(View v) {
                 Intent intent = new Intent(ViewWorker.this, EditWorker.class);
                 intent.putExtra("Class", "ViewWorker");
                 intent.putExtra(ViewWorker.WORKER_VIEW, _worker);
                 ViewWorker.this.startActivity(intent);
-            }
-        });
+            }*/
+        };
     }
-}
