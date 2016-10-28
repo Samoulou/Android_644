@@ -23,6 +23,15 @@ public class Worker {
 
     }
 
+    public Worker (String lastname, String firstname, String birthdate, String sex, String active){
+        this._lastname=lastname;
+        this._firstname=firstname;
+        this._birthdate= java.sql.Date.valueOf(birthdate);
+        //this._sex=sex;
+        //this._active=active;
+
+    }
+
     public String get_lastname() {
         return _lastname;
     }
