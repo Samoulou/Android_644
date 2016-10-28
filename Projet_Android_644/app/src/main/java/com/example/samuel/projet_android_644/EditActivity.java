@@ -9,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EditActivity extends AppCompatActivity {
-    private ListView _listView;
+    private ListView _lvWorker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_activity);
-        _listView = (ListView) findViewById(R.id.adding_worker);
+        _lvWorker = (ListView) findViewById(R.id.adding_worker);
 
         List<Worker> workers = loadDefaultWorker();
 
         WorkerAdapter adapter = new WorkerAdapter(EditActivity.this, workers);
-        _listView.setAdapter(adapter);
+        _lvWorker.setAdapter(adapter);
     }
 
     private List<Worker> loadDefaultWorker(){

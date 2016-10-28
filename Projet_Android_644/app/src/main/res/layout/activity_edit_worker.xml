@@ -167,11 +167,13 @@
         android:paddingBottom="@dimen/js_horizontal_margin"
         android:paddingTop="@dimen/js_horizontal_margin">
         <Button
+            android:id="@+id/btn_Save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/save"/>
         <Button
+            android:id="@+id/btn_Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -187,6 +189,7 @@
         android:paddingBottom="@dimen/js_horizontal_margin"
         android:paddingTop="@dimen/js_horizontal_margin">
         <Button
+            android:id="@+id/btn_Delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

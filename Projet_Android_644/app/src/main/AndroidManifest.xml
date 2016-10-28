@@ -12,11 +12,11 @@
         <activity
             android:name=".EditActivity"
             android:label="Edit activity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".EditWorker" />
         <activity android:name=".ListCompanies" />
@@ -25,13 +25,13 @@
             android:name=".ListWorkers"
             android:label="Workers list">
 
-            <!--
+
             <intent-filter>
                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+
         </activity>
         <activity
             android:name=".MainActivity"
