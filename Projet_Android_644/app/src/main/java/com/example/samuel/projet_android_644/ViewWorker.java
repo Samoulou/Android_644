@@ -50,6 +50,7 @@ public class ViewWorker extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewWorker.this, EditWorker.class);
+                intent.putExtra("Class", "ViewWorker");
                 intent.putExtra(ViewWorker.WORKER_VIEW, _worker);
                 ViewWorker.this.startActivity(intent);
             }
