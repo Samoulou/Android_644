@@ -8,43 +8,50 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ViewWorker extends AppCompatActivity {
-    public final static String CONTACT = "com.example.samuel.projet_android_644.WORKER";
+    public final static String WORKER_VIEW = "com.example.samuel.projet_android_644.WORKER";
 
-    private Button modify;
-    private TextView firstName;
-    private TextView lastName;
-    private TextView sex;
-    private TextView active;
-    private TextView birthdate;
+    private Button _btnModify;
+    private TextView _tvFirstname;
+    private TextView _tvLastname;
+    private TextView _tvSex;
+    private TextView _tvActive;
+    private TextView _tvBirthdate;
+
+    private Worker _worker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_worker);
 
-        modify = (Button) findViewById(R.id.btn_Modify);
-        firstName = (TextView) findViewById(R.id.tv_firstname_value);
-        lastName = (TextView) findViewById(R.id.tv_lastname_value);
-        sex = (TextView) findViewById(R.id.tv_sex_value);
-        active = (TextView) findViewById(R.id.tv_workerActivated_value);
-        birthdate = (TextView) findViewById(R.id.tv_birthdate_value);
 
-        modify.setOnClickListener(new View.OnClickListener() {
+        Intent intent = getIntent();
+        _worker = intent.getParcelableExtra(ListWorkers.WORKER);
+
+
+        _tvLastname = (TextView) findViewById(R.id.tv_lastname_value);
+        _tvFirstname = (TextView) findViewById(R.id.tv_firstname_value);
+        _tvBirthdate = (TextView) findViewById(R.id.tv_birthdate_value);
+        _tvSex = (TextView) findViewById(R.id.tv_sex_value);
+        _tvActive = (TextView) findViewById(R.id.tv_workerActivated_value);
+
+
+
+
+        _tvLastname.setText(_worker.get_lastname());
+        _tvFirstname.setText(_worker.get_firstname());
+        _tvBirthdate.setText(_worker.get_birthdate().toString());
+        _tvSex.setText(String.valueOf(_worker.get_sex()));
+        _tvActive.setText(String.valueOf(_worker.is_active()));  //.setText(c.getCP());
+
+        _btnModify = (Button) findViewById(R.id.btn_Modify);
+        _btnModify.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-                String sFirstname = firstName.getText().toString();
-                String sLastname = lastName.getText().toString();
-                String sSex = sex.getText().toString();
-                String sActive = active.getText().toString();
-                String sBirthdate = birthdate.getText().toString();
-
-                //Worker w = new Worker(sLastname,sFirstname,sBirthdate,sSex,sActive,sBirthdate);
-
                 Intent intent = new Intent(ViewWorker.this, EditWorker.class);
-                //intent.putExtra(CONTACT, w);
+                intent.putExtra(ViewWorker.WORKER_VIEW, _worker);
                 ViewWorker.this.startActivity(intent);
-
             }
         });
     }
