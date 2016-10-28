@@ -42,5 +42,7 @@
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
     <string name="modify">Modify</string>
+    <string name="title_activity_test">test</string>
+    <string name="title_activity_edit_worker_js">EditWorker_js</string>
 
 </resources>

@@ -80,6 +80,10 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/js_horizontal_margin"
         android:paddingRight="@dimen/js_horizontal_margin">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <RadioButton
             android:id="@+id/rb_male"
             android:layout_width="wrap_content"
@@ -90,15 +94,8 @@
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
             android:inputType="date"
-            android:hint="@string/male"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/js_horizontal_margin"
-        android:paddingRight="@dimen/js_horizontal_margin">
+            android:hint="@string/male"
+            android:onClick="onRadioButtonClicked"/>/>
         <RadioButton
             android:id="@+id/rb_female"
             android:layout_width="wrap_content"
@@ -109,7 +106,18 @@
             android:paddingBottom="@dimen/js_horizontal_margin"
             android:paddingTop="@dimen/js_horizontal_margin"
             android:inputType="date"
-            android:hint="@string/female"/>
+            android:hint="@string/female"
+            android:onClick="onRadioButtonClicked"/>/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/js_horizontal_margin"
+        android:paddingRight="@dimen/js_horizontal_margin">
+
     </LinearLayout>
 
     <LinearLayout

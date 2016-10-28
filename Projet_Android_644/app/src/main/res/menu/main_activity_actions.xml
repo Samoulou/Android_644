@@ -1,11 +1,25 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:jsApp="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_search"
+        jsApp:id="@+id/action_edit"
         android:showAsAction="ifRoom"
-        android:title="Refresh"/>
+        jsApp:title="Edit"
+        jsApp:icon="@drawable/ic_action_edit"/>
     <item
-        android:id="@+id/action_settings"
-        android:title="Settings"
+        jsApp:id="@+id/action_settings"
+        jsApp:title="Settings"
+        android:showAsAction="never"/>
+    <item
+        jsApp:id="@+id/action_view_workers_list"
+        jsApp:title="Workers list"
+        android:showAsAction="never"/>
+    <item
+        jsApp:id="@+id/action_view_activities_list"
+        jsApp:title="Activities list"
+        android:showAsAction="never"/>
+    <item
+        jsApp:id="@+id/action_view_companies_list"
+        jsApp:title="Companies list"
         android:showAsAction="never"/>
 </menu>

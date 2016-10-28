@@ -26,7 +26,11 @@ public class EditWorker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_worker);
+
+
+
         Intent intent = getIntent();
+
         _worker = intent.getParcelableExtra(ViewWorker.WORKER_VIEW);
 
         _etFirstname = (EditText) findViewById(R.id.et_firstname);
@@ -61,5 +65,21 @@ public class EditWorker extends AppCompatActivity {
                 EditWorker.this.startActivity(intent);
             }
         });
+    }
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.rb_male:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.rb_female:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
     }
 }
