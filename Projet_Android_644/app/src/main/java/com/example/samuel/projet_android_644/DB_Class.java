@@ -2,6 +2,7 @@ package com.example.samuel.projet_android_644;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class DB_Class extends SQLiteOpenHelper {
+
+    Context context;
 
     public static final int DATABASE_VERSION = 1;
     public static final String TEXT_TYPE ="VARCHAR";
@@ -23,8 +26,10 @@ public class DB_Class extends SQLiteOpenHelper {
     {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         Log.e("DATABASE OPERATIONS", "Table created/opened");
+        this.context = context;
     }
 
+    DB_Class dbhelper = new DB_Class(context);
 
 
     @Override
@@ -36,15 +41,31 @@ public class DB_Class extends SQLiteOpenHelper {
 
     public void addInfo(String firstname, String lastname, String sexe, SQLiteDatabase db)
     {
+         db = dbhelper.getWritableDatabase();
+
         ContentValues contentValues = new ContentValues();
         contentValues.put(DB_Contract.workers.COLUMN_NAME_FIRSTNAME, firstname);
         contentValues.put(DB_Contract.workers.COLUMN_NAME_NAME, lastname);
-        contentValues.put(DB_Contract.workers.COLUMN_NAME_SEXE, firstname);
+        contentValues.put(DB_Contract.workers.COLUMN_NAME_SEXE, sexe);
         db.insert(DB_Contract.workers.TABLE_NAMES,null,contentValues);
+        Log.e("DATABASE OPERATIONS", "Worker added");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    Worker getWorker (int id) {
+            SQLiteDatabase db = this.getReadableDatabase();
+
+            Cursor cursor = db.query(DB_Contract.workers.TABLE_NAMES, new String[]{DB_Contract.workers.COLUMN_NAME_FIRSTNAME
+                    ,DB_Contract.workers.COLUMN_NAME_NAME, DB_Contract.workers.COLUMN_NAME_SEXE}, null, null, null, null, null);
+
+
+            //Filtrer les résultat WHERE si besoin
+            Worker worker = new Worker(cursor.getString(0), cursor.getString(1),  09.09.1990, 'm', true);
+
+    }
 }
+

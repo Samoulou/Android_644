@@ -11,6 +11,7 @@ public class ViewWorker extends AppCompatActivity {
     public final static String WORKER_VIEW = "com.example.samuel.projet_android_644.WORKER";
 
     private Button _btnModify;
+    private Button _btnLoad;
     private TextView _tvFirstname;
     private TextView _tvLastname;
     private TextView _tvSex;
@@ -55,4 +56,15 @@ public class ViewWorker extends AppCompatActivity {
                 ViewWorker.this.startActivity(intent);
             }*/
         };
+
+       /* private View.OnClickListener clickLoad = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Worker worker;
+
+                _tvFirstname.append("");
+
+
+            }
+        }*/
     }

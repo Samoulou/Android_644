@@ -154,5 +154,12 @@
             android:layout_weight="1"
             android:text="@string/modify" />
 
+        <Button
+            android:id="@+id/btn_load"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="Load" />
     </LinearLayout>
 </ScrollView>
